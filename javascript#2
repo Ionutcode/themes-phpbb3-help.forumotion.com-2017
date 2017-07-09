@@ -1,0 +1,10 @@
+$(function() {
+    for (var a = document.getElementsByTagName('A'), i = 0, j = a.length, form; i < j; i++) {
+        if (/\/search\?search_id=|\/memberlist\?mode=|\/sta\/|\/spa\//.test(a[i].href)) {
+            a[i].onclick = function() {
+                FA.Popup.open(this.href, this.innerHTML);
+                return false
+            }
+        }
+    }
+});
